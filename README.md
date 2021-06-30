@@ -10,7 +10,7 @@
 
 ### Lógica, Javascript e React
 
-- Os itens com ids impares da lista devem possuir o background cinza claro, os pares, branco.
+[x] Os itens com ids impares da lista devem possuir o background cinza claro, os pares, branco.
 - Utilize outra forma de gerar ids únicos e randômicos para cada item
 - A função de Done não está implementada, por favor implemente
 - Ao adicionar um item na lista, o input de texto deve ser limpo

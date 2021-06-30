@@ -1,7 +1,7 @@
 export default function reducer(state, action) {
 
     const addTodo = (todo) => {
-        let todoItem = { id: state.length + 1, description: todo, done: false };
+        let todoItem = { id: Math.floor(Math.random() * 1000000) + 1, description: todo, done: false };
         return [...state, todoItem];
     }
 

@@ -11,7 +11,7 @@
 ### Lógica, Javascript e React
 
 - [x] Os itens com ids impares da lista devem possuir o background cinza claro, os pares, branco.
-- Utilize outra forma de gerar ids únicos e randômicos para cada item
+- [x] Utilize outra forma de gerar ids únicos e randômicos para cada item
 - A função de Done não está implementada, por favor implemente
 - Ao adicionar um item na lista, o input de texto deve ser limpo
 - Quando um item estiver FEITO, a palavra 'sim' deve estar verde e quando for 'não' devem estar em vermelho.

@@ -24,7 +24,7 @@
 
 - [x] Adicione alguma bibloteca de Estilo (Bootstrap, Material)
 - [x] Mude a fonte inteira da aplicação. Qualquer outra que não seja Times new Roman
-- Personalize apenas um componente (o input de todo ou o botão de adicionar.  Mude a cor de fundo (qualquer cor) e deixe com bordas arredondas (o quanto desejar))
+- [x] Personalize apenas um componente (o input de todo ou o botão de adicionar.  Mude a cor de fundo (qualquer cor) e deixe com bordas arredondas (o quanto desejar))
 - Quando estiver sobre um item da lista, mude o ponteiro do mouse, para que o item pareça clicável.
 - Existe um componente na aplicação que está dentro de uma tag div, porém poderia estar dentro de um tag article,
         Mude para article o componente que acredita ser o mais indicado

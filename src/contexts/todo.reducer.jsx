@@ -5,11 +5,17 @@ export default function reducer(state, action) {
         return [...state, todoItem];
     }
 
-    const updateTodo = (todo) => {
-        return state;
+    const updateTodo = (id, done) => {
+        console.log(id)
+        let todoItem = state.find(todo => todo.id === id);
+        if (todoItem === -1){
+          return;  
+        }
+        todoItem.done = done;    
+        return [...state];
     };
 
-    const deleteTodo = (todo) => {
+    const deleteTodo = (_todo) => {
         return state;
     }
 
@@ -18,7 +24,7 @@ export default function reducer(state, action) {
         case 'add':
             return addTodo(action.payload);
         case 'update':
-            return updateTodo(action.payload);
+            return updateTodo(action.payload.id, action.payload.done);
         case 'remove':
             return deleteTodo(action.payload);
         default:

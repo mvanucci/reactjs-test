@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import {TodoContext } from '../../../../contexts/todo.context'
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(() => ({
@@ -10,6 +11,12 @@ const useStyles = makeStyles(() => ({
 export default function Todo({ id, description, done }) {
 
    const color = useStyles();
+   const todoContext = useContext(TodoContext);
+
+   const onDoneCheck = (e, id) => {
+    e.preventDefault();
+    todoContext.dispatch({type: 'update', payload: {id: id, done: true} })
+   }
 
     return (
         <div >
@@ -18,7 +25,7 @@ export default function Todo({ id, description, done }) {
                 {id % 2 !== 0 ?  <div className={color.colorStyle}>Feito? {done === true ? 'Sim' : 'Não'}</div> :  <div>Feito? {done === true ? 'Sim' : 'Não'}</div>}
             </div>
             <div >
-                <button type="button" >Ok</button>
+                <button type="button" onClick={(e) => onDoneCheck(e, id)}>Ok</button>
             </div>
         </div>
     )

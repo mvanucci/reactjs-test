@@ -35,7 +35,7 @@ export default function Todo({ id, description, done }) {
    }
 
     return (
-        <div className={color.taskItem}>
+        <article className={color.taskItem}>
             <div>
                 {id % 2 !== 0 ? <div className={color.colorStyle}>{id} - {description}</div> : <div>{id} - {description}</div>}
                 {id % 2 !== 0 ?  <div className={color.colorStyle}>Feito? {done === true ? 
@@ -47,6 +47,6 @@ export default function Todo({ id, description, done }) {
                 {showButtonOk && <button type="button" onClick={(e) => onDoneCheck(e, id)}>Ok</button>}
                 <button type="button" onClick={(e) => onDeleteTask(e, id)}>Deletar</button>
             </div>
-        </div>
+        </article>
     )
 }

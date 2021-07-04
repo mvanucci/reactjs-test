@@ -13,7 +13,7 @@
 - [x] Os itens com ids impares da lista devem possuir o background cinza claro, os pares, branco.
 - [x] Utilize outra forma de gerar ids únicos e randômicos para cada item
 - [x] A função de Done não está implementada, por favor implemente
-- Ao adicionar um item na lista, o input de texto deve ser limpo
+- [x] Ao adicionar um item na lista, o input de texto deve ser limpo
 - Quando um item estiver FEITO, a palavra 'sim' deve estar verde e quando for 'não' devem estar em vermelho.
 - Quando um item estiver FEITO, o botão 'Ok' deve ficar invisível
 - Adicione mais um botão de ação aos itens, com a lógica de exclusão [Delete] (não se preocupe com layout)

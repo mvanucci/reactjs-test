@@ -9,13 +9,14 @@ export default function TodoHeader() {
     const handleAddTodo = (e) => {
         e.preventDefault()
         todoContext.dispatch({ type: 'add', payload: todo });
+        setTodo('')
     }
 
     return (
         <div>
             <p>Lista de Atividades</p>
             <div >
-                <input type="text" onChange={(e) => { setTodo(e.target.value) }} placeholder="digite para filtrar"></input>
+                <input type="text" onChange={(e) => { setTodo(e.target.value) }} placeholder="digite para filtrar" value={todo}></input>
                 <button type="button" onClick={(e) => handleAddTodo(e)}>Adicionar</button>
             </div>
         </div>

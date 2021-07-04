@@ -1,3 +1,4 @@
+
 export default function reducer(state, action) {
 
     const addTodo = (todo) => {
@@ -6,17 +7,22 @@ export default function reducer(state, action) {
     }
 
     const updateTodo = (id, done) => {
-        console.log(id)
         let todoItem = state.find(todo => todo.id === id);
-        if (todoItem === -1){
-          return;  
+        if (typeof task === 'undefined'){
+            return [...state];
         }
         todoItem.done = done;    
         return [...state];
     };
 
-    const deleteTodo = (_todo) => {
-        return state;
+    const deleteTodo = (id) => {
+       let task = state.find(todo => todo.id === id);
+        if (typeof task === 'undefined') {
+            return[...state];
+        }
+        state.splice(state.indexOf(id), 1)
+        console.log(task);
+       return [...state];
     }
 
     switch (action.type) {
@@ -26,7 +32,7 @@ export default function reducer(state, action) {
         case 'update':
             return updateTodo(action.payload.id, action.payload.done);
         case 'remove':
-            return deleteTodo(action.payload);
+            return deleteTodo(action.payload.id);
         default:
             return null;
     }

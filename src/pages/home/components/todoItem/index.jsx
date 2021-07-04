@@ -26,6 +26,11 @@ export default function Todo({ id, description, done }) {
     todoContext.dispatch({type: 'update', payload: {id: id, done: true} })
    }
 
+   const onDeleteTask = (e, id) => {
+       e.preventDefault();
+       todoContext.dispatch({type: 'remove', payload: { id: id }});
+   }
+
     return (
         <div >
             <div>
@@ -37,6 +42,7 @@ export default function Todo({ id, description, done }) {
             </div>
             <div >
                 {showButtonOk && <button type="button" onClick={(e) => onDoneCheck(e, id)}>Ok</button>}
+                <button type="button" onClick={(e) => onDeleteTask(e, id)}>Deletar</button>
             </div>
         </div>
     )

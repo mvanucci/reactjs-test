@@ -15,7 +15,7 @@
 - [x] A função de Done não está implementada, por favor implemente
 - [x] Ao adicionar um item na lista, o input de texto deve ser limpo
 - [x] Quando um item estiver FEITO, a palavra 'sim' deve estar verde e quando for 'não' devem estar em vermelho.
-- Quando um item estiver FEITO, o botão 'Ok' deve ficar invisível
+- [x] Quando um item estiver FEITO, o botão 'Ok' deve ficar invisível
 - Adicione mais um botão de ação aos itens, com a lógica de exclusão [Delete] (não se preocupe com layout)
 - Sempre que atualizo a tela a lista é limpa, utilize um meio de manter as informações constantes
         (Talvez sessionStorage ?)

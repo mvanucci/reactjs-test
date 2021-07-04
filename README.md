@@ -17,7 +17,7 @@
 - [x] Quando um item estiver FEITO, a palavra 'sim' deve estar verde e quando for 'não' devem estar em vermelho.
 - [x] Quando um item estiver FEITO, o botão 'Ok' deve ficar invisível
 - [x] Adicione mais um botão de ação aos itens, com a lógica de exclusão [Delete] (não se preocupe com layout)
-- Sempre que atualizo a tela a lista é limpa, utilize um meio de manter as informações constantes
+- [x] Sempre que atualizo a tela a lista é limpa, utilize um meio de manter as informações constantes
         (Talvez sessionStorage ?)
 
 ### HTML e CSS
@@ -28,7 +28,7 @@
 - Quando estiver sobre um item da lista, mude o ponteiro do mouse, para que o item pareça clicável.
 - Existe um componente na aplicação que está dentro de uma tag div, porém poderia estar dentro de um tag article,
         Mude para article o componente que acredita ser o mais indicado
-- Ao ir concluindo cada solicitação dessa lista, por favor gere um commit e realize o push.
+- [x] Ao ir concluindo cada solicitação dessa lista, por favor gere um commit e realize o push.
 - Prazo para entrega: Caso esteja livre inicio imediato, o prazo é 24hrs. Caso esteja trabalhando, é 48hrs.
 - Quando concluir, responda o email que recebeu com o link desse repositório, adicionando o link do SEU repositório com a aplicação concluida.
 

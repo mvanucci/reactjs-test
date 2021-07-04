@@ -1,27 +1,39 @@
+import repository from '../data/repository';
 
 export default function reducer(state, action) {
-
+    const data = repository();
     const addTodo = (todo) => {
         let todoItem = { id: Math.floor(Math.random() * 1000000) + 1, description: todo, done: false };
+        let task = data.getItemParse('todos');
+
+        if (task) {
+            task.push(todoItem);
+            data.setItemStringify('todos', task);
+        } else {
+            data.setItemStringify('todos', [todoItem]);
+        }
+
         return [...state, todoItem];
     }
 
     const updateTodo = (id, done) => {
         let todoItem = state.find(todo => todo.id === id);
-        if (typeof task === 'undefined'){
+
+        if (typeof todoItem === 'undefined'){
             return [...state];
         }
-        todoItem.done = done;    
+        todoItem.done = done;
+        data.setItemStringify('todos', [...state]);
         return [...state];
     };
 
     const deleteTodo = (id) => {
        let task = state.find(todo => todo.id === id);
         if (typeof task === 'undefined') {
-            return[...state];
+           //return[...state];
         }
-        state.splice(state.indexOf(id), 1)
-        console.log(task);
+        state.splice(state.findIndex(t => t.id === id), 1);
+        data.setItemStringify('todos', [...state]);
        return [...state];
     }
 

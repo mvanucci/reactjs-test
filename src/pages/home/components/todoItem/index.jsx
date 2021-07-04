@@ -11,6 +11,9 @@ const useStyles = makeStyles(() => ({
     },
     taskNotDone: {
         color: '#ff5252'
+    },
+    taskItem: {
+        cursor:'pointer'
     }
 }));
 
@@ -32,7 +35,7 @@ export default function Todo({ id, description, done }) {
    }
 
     return (
-        <div >
+        <div className={color.taskItem}>
             <div>
                 {id % 2 !== 0 ? <div className={color.colorStyle}>{id} - {description}</div> : <div>{id} - {description}</div>}
                 {id % 2 !== 0 ?  <div className={color.colorStyle}>Feito? {done === true ? 
